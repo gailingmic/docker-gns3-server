@@ -14,8 +14,13 @@ RUN mkdir /data && \
 
 CMD [ "/start.sh" ]
 
-# workaround for https://github.com/GNS3/gns3-server/issues/2367
-RUN ln -s /bin/busybox /usr/lib/python*/site-packages/gns3server/compute/docker/resources/bin
+
+RUN mkdir /busyboxtemp && \
+    cd /busyboxtemp && \
+    wget -q http://ftp.de.debian.org/debian/pool/main/b/busybox/busybox-static_1.37.0-7_amd64.deb && \
+    ar x busybox-static_1.37.0-7_amd64.deb && \
+    tar -xf data.tar.xz && \
+    cp /busyboxtemp/usr/bin/busybox /usr/lib/python*/site-packages/gns3server/compute/docker/resources/bin
 
 WORKDIR /data
 
