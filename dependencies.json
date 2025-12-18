@@ -10,5 +10,6 @@
     "tigervnc": "1.15.0-r2",
     "ubridge": "0.9.19-r0",
     "util-linux": "2.41.2-r0",
-    "vpcs": "0.8.3-r0"
+    "vpcs": "0.8.3-r0",
+    "tigervnc": "1.13.1-r5"
 }
