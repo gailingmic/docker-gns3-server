@@ -11,6 +11,6 @@
     "ubridge": "0.9.19-r0",
     "util-linux": "2.41.2-r0",
     "vpcs": "0.8.3-r0",
-    "tigervnc": "1.13.1-r5",
-    "binutils": "2.37-r3"
+    "tigervnc": "1.15.0-r2",
+    "binutils": "2.45.1-r0"
 }
